@@ -1,3 +1,11 @@
-const counterReducer = (state, action) => state
+import PostsList from "./features/posts/PostsList";
 
-counterReducer(0, "Incrementar")
+function App() {
+  return (
+    <main className="App">
+      <PostsList />
+    </main>
+  );
+}
+
+export default App;
