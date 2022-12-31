@@ -1,36 +1,11 @@
-const counterReducer = (state, action) => {
-  
-  const {type} = action
-  if (type === '@counter/incremented') {
-    return state + 1
-  }
-  if (type === '@counter/decremented') {
-    return state - 1
-  }
-  if (type === '@counter/reseted') {
-    return 0
-  }
-}
+import PostsList from "./features/posts/PostsList";
 
-const actionIncrement = {
-  type: '@counter/incremented'
-}
-
-const actionDecremented = {
-  type: '@counter/decremented'
-}
-
-const actionReset = {
-  type: '@counter/reseted'
-}
-
-export default function App() {
-
+function App() {
   return (
-    <div>
-      {counterReducer(0, actionIncrement)}
-      {counterReducer(1, actionDecremented)}
-    </div>
-
+    <main className="App">
+      <PostsList />
+    </main>
   );
 }
+
+export default App;
