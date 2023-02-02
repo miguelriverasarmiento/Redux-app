@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import AddPostForm from './features/posts/AddPostForm'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('It should show in the screen the title Add a New Post', () => {
+  
+render(<AddPostForm />);
+expect(screen.getByText(/Add a New Post/i)).toBeInTheDocument();
 });
